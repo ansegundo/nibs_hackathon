@@ -1,12 +1,16 @@
-function cria_cards(name, description) {
-    let pessoas = document.querySelector("#pessoas");
+function cria_cards(name, description, tipo) {
+    let pessoas = document.querySelector(`#${tipo}`);
     let div = document.createElement("div");
     div.classList.add("teste");
+    let color = 'red';
+    if (tipo == "hemocentros")
+        color = 'green';
+
 
     let template = `
     <a href="#">
     <div class="col m6">
-        <div class="card hoverable red">
+        <div class="card hoverable ${color}">
             <div class="row valign-wrapper">
                 <div class="col s2">
                     <img src="res/logo.svg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
@@ -26,8 +30,7 @@ function cria_cards(name, description) {
     pessoas.appendChild(div);
 }
 
-function loadCards() {
-    let pessoas = get_pessoas();
+function loadCards(pessoas, tipo) {
     for (let i = 0; i < pessoas.length; i++) {
         let name = pessoas[i].first_namew;
         let lName = pessoas[i].last_name;
@@ -35,6 +38,6 @@ function loadCards() {
 
         let fullName = name + " " + lName;
 
-        cria_cards(fullName, description);
+        cria_cards(fullName, description, tipo);
     }
 }
