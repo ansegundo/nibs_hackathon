@@ -13,10 +13,15 @@ function cria_cards(name, description) {
     let template = `
     <div class="col m6">
         <div class="card hoverable red">
-        <div class="card-content white-text">
-            <span class="card-title">${name}</span>
-            <p>${description}.</p>
-        </div>
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                    <img src="res/logo.svg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                </div>
+                <div class="card-content white-text col s10">
+                    <span class="card-title">${name}</span>
+                    <p class="truncate">${description}.</p>
+                </div>
+            </div>
         </div>
     </div>
     `;
