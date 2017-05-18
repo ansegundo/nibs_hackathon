@@ -1,4 +1,10 @@
 #content {
-    margin-left: 315px;
-    margin-top: -25px;
+    padding-left: 307px;
+    margin-top: -22px;
+}
+
+@media only screen and (max-width: 992px) {
+    #content {
+        padding-left: 25px;
+    }
 }
