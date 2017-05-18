@@ -3,5 +3,5 @@ function page_load(pageName) {
 
     page.innerHTML = ``;
 
-    $("#page1").load(`../${pageName}.html`);
+    $("#page1").load(`templates/${pageName}.html`);
 }
