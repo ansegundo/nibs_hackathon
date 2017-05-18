@@ -9,8 +9,10 @@ function page_test() {
 function cria_cards(name, description) {
     let pessoas = document.querySelector("#pessoas");
     let div = document.createElement("div");
+    div.classList.add("teste");
 
     let template = `
+    <a href="#">
     <div class="col m6">
         <div class="card hoverable red">
             <div class="row valign-wrapper">
@@ -24,6 +26,7 @@ function cria_cards(name, description) {
             </div>
         </div>
     </div>
+    </a>
     `;
 
     div.innerHTML = template;
