@@ -23,9 +23,9 @@
                     <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
                 </div>
             </li>
-            <li><a href="#!" onclick="page_feed()"><i class="material-icons">rss_feed</i>Feed</a></li>
+            <li><a href="#!" onclick="page_load('feed')"><i class="material-icons">rss_feed</i>Feed</a></li>
             <hr>
-            <li><a href="#!" onclick="page_map()"><i class="material-icons">map</i>Mapa</a></li>
+            <li><a href="#!" onclick="page_load('map')"><i class="material-icons">map</i>Mapa</a></li>
             <hr>
             <li><a href="#!"><i class="material-icons">insert_drive_file</i>Cartilha</a></li>
             <hr>
@@ -54,7 +54,7 @@
 
     <!-- jQuery Materialize-->
     <script>
-        page_feed();
+        page_load('feed');
 
         $('.button-collapse').sideNav({
             menuWidth: 300, // Default is 300

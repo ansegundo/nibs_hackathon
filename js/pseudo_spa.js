@@ -1,25 +1,7 @@
-function page_feed() {
+function page_load(pageName) {
     let page = document.querySelector("#page1");
 
     page.innerHTML = ``;
 
-    $("#page1").load("feed.html");
-
-    $(document).ready(function() {
-        $('ul.tabs').tabs();
-    });
-
-    loadCards();
-}
-
-function page_map() {
-    let page = document.querySelector("#page1");
-
-    page.innerHTML = '';
-
-    $("#page1").load("map.html");
-
-    $(document).ready(function() {
-        $('ul.tabs').tabs();
-    });
+    $("#page1").load(`${pageName}.html`);
 }
