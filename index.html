@@ -23,9 +23,9 @@
                     <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
                 </div>
             </li>
-            <li><a href="#!"><i class="material-icons">rss_feed</i>Feed</a></li>
+            <li><a href="#!" onclick="page_feed()"><i class="material-icons">rss_feed</i>Feed</a></li>
             <hr>
-            <li><a href="#!"><i class="material-icons">map</i>Mapa</a></li>
+            <li><a href="#!" onclick="page_map()"><i class="material-icons">map</i>Mapa</a></li>
             <hr>
             <li><a href="#!"><i class="material-icons">insert_drive_file</i>Cartilha</a></li>
             <hr>
@@ -40,38 +40,29 @@
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     </header>
     <section id="page1" class="view content">
-        <div class="row">
-            <div class="col s12">
-                <ul id="tabs-swipe-demo" class="tabs">
-                    <li class="tab col s6"><a class="active" href="#pessoas">Pessoas</a></li>
-                    <li class="tab col s6"><a class="active" href="#hemocentros">Hemocentros</a></li>
-                </ul>
-                <div id="pessoas" class="col s12"></div>
-                <div id="hemocentros" class="col s12"></div>
-            </div>
-        </div>
+
     </section>
 
     </footer>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="res/names.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/pessoas.js"></script>
+    <script src="js/pseudo_spa.js"></script>
+
+    <!-- jQuery Materialize-->
     <script>
+        page_feed();
+
         $('.button-collapse').sideNav({
             menuWidth: 300, // Default is 300
             edge: 'left', // Choose the horizontal origin
             closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
             draggable: true // Choose whether you can drag to open on touch screens
         });
-
-        $(document).ready(function() {
-            $('ul.tabs').tabs();
-        });
     </script>
-    <script src="js/profile.js"></script>
-    <script src="js/pseudo_spa.js"></script>
-    <script src="res/names.js"></script>
-    <script src="js/pessoas.js"></script>
 </body>
 
 </html>
