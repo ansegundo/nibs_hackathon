@@ -1,8 +1,7 @@
 function page_test() {
-    let page = document.querySelector(".content");
+    let page = document.querySelector("#page1");
 
     page.innerHTML = `
-    <h1>Pau no seu cu</h1>
     `
+    $("#page1").load( "map.html" );
 }
-
