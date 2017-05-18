@@ -40,9 +40,23 @@
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     </header>
-    <section id="content">
-        Body
+
+    <section id="page1" class="view content">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s6"><a class="active" href="#pessoas">Pessoas</a></li>
+                    <li class="tab col s6"><a href="#bancos">Bancos<//a></li>
+                </ul>
+            </div>
+        </div>
     </section>
+    
+    <div class="pessoas">
+        <script>
+        
+        </script>
+    </div>
 
     </footer>
 
@@ -52,11 +66,12 @@
         $('.button-collapse').sideNav({
             menuWidth: 300, // Default is 300
             edge: 'left', // Choose the horizontal origin
-            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
             draggable: true // Choose whether you can drag to open on touch screens
         });
     </script>
     <script src="js/profile.js"></script>
+    <script src="res/names.js"></script>
 </body>
 
 </html>
