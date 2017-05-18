@@ -16,9 +16,9 @@
             <li>
                 <div class="userView">
                     <div class="background">
-                        <img src="images/office.jpg">
+                        <img src="res/profile-bg.jpg">
                     </div>
-                    <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+                    <a href="#!user"><img class="circle" src="res/logo.svg"></a>
                     <a href="#!name"><span class="white-text name">John Doe</span></a>
                     <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
                 </div>
@@ -41,11 +41,14 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
-        // Initialize collapse button
-        $(".button-collapse").sideNav();
-        // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-        //$('.collapsible').collapsible();
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 300
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true // Choose whether you can drag to open on touch screens
+        });
     </script>
+    <script src="js/profile.js"></script>
 </body>
 
 </html>
