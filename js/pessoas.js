@@ -18,7 +18,7 @@ function cria_cards(name, description) {
             </div>
         </div>
     </div>
-    </a>
+    </a> 
     `;
 
     div.innerHTML = template;
@@ -38,5 +38,3 @@ function loadCards() {
         cria_cards(fullName, description);
     }
 }
-
-loadCards();
