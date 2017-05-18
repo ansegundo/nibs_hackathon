@@ -6,9 +6,8 @@ function cria_cards(name, description, tipo) {
     if (tipo == "hemocentros")
         color = 'green';
 
-
     let template = `
-    <a href="#">
+    <a href="#${name+description}">
     <div class="col m6">
         <div class="card hoverable ${color}">
             <div class="row valign-wrapper">
@@ -23,6 +22,23 @@ function cria_cards(name, description, tipo) {
         </div>
     </div>
     </a> 
+
+    <div id="${name+description}" class="modal">
+        <div class="modal-content">
+            <h4>${name}</h4>
+            <p>${description}</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+                // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+                $('.modal').modal();
+            });
+    </script>
+
     `;
 
     div.innerHTML = template;
