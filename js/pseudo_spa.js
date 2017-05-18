@@ -18,7 +18,7 @@ function cria_cards(name, description) {
                     <img src="res/logo.svg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                 </div>
                 <div class="card-content white-text col s10">
-                    <span class="card-title">${name}</span>
+                    <span class="card-title truncate">${name}</span>
                     <p class="truncate">${description}.</p>
                 </div>
             </div>
