@@ -18,9 +18,9 @@
             <li>
                 <div class="userView">
                     <div class="background dark-primary-color"></div>
-                    <a href="#!user"><img class="circle" src="res/logo.svg"></a>
+                    <a href="#!user"><img class="circle" src="res/gavin.jpg"></a>
                     <a href="#!name"><span class="white-text name">Gavin Belson</span></a>
-                    <a href="#!email"><span class="white-text email">gavinbelson@holli.com</span></a>
+                    <a href="#!email"><span class="white-text email">gavinbelson@hooli.com</span></a>
                 </div>
             </li>
             <li><a href="#!" onclick="page_load('feed')"><i class="material-icons">rss_feed</i>Feed</a></li>
@@ -64,6 +64,8 @@
         page_load('feed');
 
         var gavin = new Doador("Gavin Belson", "O-");
+        var jack = new Doador("Jack Barker", "A+");
+        gavin.receberDoacao(jack);
 
         $('.button-collapse').sideNav({
             menuWidth: 300, // Default is 300

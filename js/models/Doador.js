@@ -16,11 +16,12 @@ class Doador {
 
     doar(receptor, hemocentro) {
         let doacao = new Doacao(this, receptor, hemocentro);
-        receptor.receberDoacao(doacao);
+        receptor.receberDoacao(this, receptor, hemocentro);
         this._euDoei.push(doacao);
     }
 
-    receberDoacao(doacao) {
+    receberDoacao(doador) {
+        let doacao = new Doacao(doador, this, "Hooli");
         this._meDoaram.push(doacao);
     }
 }
