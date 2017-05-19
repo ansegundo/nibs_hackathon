@@ -6,10 +6,10 @@ function cria_cards(name, description, tipo) {
     if (tipo == "hemocentros")
         color = 'green';
 
-    let template = `
+    let template = `    
     <div class="col m6">
-        <div class="card hoverable ${color} waves-effect">
-            <div class="row valign-wrapper">
+        <div class="card hoverable ${color} waves-effect modal">
+            <div class="row valign-wrapper modal-content">
                 <div class="col s2">
                     <img src="res/logo.svg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                 </div>
@@ -36,5 +36,5 @@ function loadCards(pessoas, tipo) {
         let fullName = name + " " + lName;
 
         cria_cards(fullName, description, tipo);
-    }
+    }   
 }
