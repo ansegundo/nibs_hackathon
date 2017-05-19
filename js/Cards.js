@@ -6,7 +6,7 @@ function cria_cards(name, description, tipo) {
     if (tipo == "donations4me")
         color = 'green';
 
-    let template = `
+    let template = `    
     <div class="col m6">
         <div class="card hoverable ${color} waves-effect">
             <div class="row valign-wrapper">
@@ -43,3 +43,4 @@ function loadCards(pessoas, tipo, clean = false) {
             cria_cards(title, description, tipo);
         }
 }
+
