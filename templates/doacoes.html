@@ -9,15 +9,59 @@
     </div>
 </div>
 
+
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red" href="#modal1">
+        <i class="large material-icons">add</i>
+    </a>
+</div>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Doar para:</h4>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="inputName" type="text" class="validate">
+                        <label for="inputName">Nome</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="inputHemocentro" type="text" class="validate">
+                        <label for="inputHemocentro">Hemocentro</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" onclick="reloadCards()" class="modal-action modal-close waves-effect waves-green btn-flat">Doar</a>
+    </div>
+</div>
+
 <script>
     $(document).ready(function() {
         $('ul.tabs').tabs();
     });
 
-    let albedo = new Doador("Alberto", "O+");
-    let predega = new Doador("Pedrecal", "A+");
+    $(document).ready(function() {
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
 
-    albedo.doar(predega, "Hemocentro Ilheus");
+    let gavin = new Doador("Gavin Belson", "O-");
 
-    loadCards(albedo.doacoesEuFiz, 'donations');
+    function reloadCards() {
+        let inputnome = document.querySelector("#inputName").value;
+        let inputhemo = document.querySelector("#inputHemocentro").value;
+        let predega = new Doador(inputnome, "A+");
+        gavin.doar(predega, inputhemo);
+        loadCards(gavin.doacoesEuFiz, 'donations');
+    }
+
+
+    loadCards(gavin.doacoesEuFiz, 'donations');
 </script>

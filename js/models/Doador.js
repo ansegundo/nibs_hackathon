@@ -18,7 +18,6 @@ class Doador {
         let doacao = new Doacao(this, receptor, hemocentro);
         receptor.receberDoacao(doacao);
         this._euDoei.push(doacao);
-        console.log(this._euDoei);
     }
 
     receberDoacao(doacao) {
