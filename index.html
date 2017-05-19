@@ -44,18 +44,17 @@
     </section>
 
     <div class="fixed-action-btn">
-        <a class="btn-floating btn-large pink waves-effect waves-light" href="#modal1">
+        <a class="btn-floating btn-large pink waves-effect waves-light">
             <i class="large material-icons">add</i>
         </a>
     </div>
 
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
         </div>
     </div>
 
@@ -77,6 +76,12 @@
             edge: 'left', // Choose the horizontal origin
             closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
             draggable: true // Choose whether you can drag to open on touch screens
+        });
+    </script>
+    <script id="scriptmodal">
+        $(document).ready(function() {
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
         });
     </script>
 </body>

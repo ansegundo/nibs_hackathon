@@ -7,9 +7,8 @@ function cria_cards(name, description, tipo) {
         color = 'green';
 
     let template = `
-    <a href="#${name+description}">
-    <div class="col m6">
-        <div class="card hoverable ${color}">
+    <div class="col m6" onclick="changeModal('${name}', '${description}')">
+        <div class="card hoverable ${color} waves-effect">
             <div class="row valign-wrapper">
                 <div class="col s2">
                     <img src="res/logo.svg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
@@ -21,29 +20,25 @@ function cria_cards(name, description, tipo) {
             </div>
         </div>
     </div>
-    </a> 
-
-    <div id="${name+description}" class="modal">
-        <div class="modal-content">
-            <h4>${name}</h4>
-            <p>${description}</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
-    </div>
-    <script>
-        $(document).ready(function() {
-                // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-                $('.modal').modal();
-            });
-    </script>
-
     `;
 
     div.innerHTML = template;
 
     pessoas.appendChild(div);
+}
+
+function changeModal(name, description) {
+    let modal = document.querySelector("#modal1");
+    modal.innerHTML = `
+    <div class="modal-content">
+        <h4>${name}</h4>
+        <p>${description}</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+    </div>
+    `;
+    console.log(modal);
 }
 
 function loadCards(pessoas, tipo) {
