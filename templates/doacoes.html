@@ -52,16 +52,14 @@
         $('.modal').modal();
     });
 
-    let gavin = new Doador("Gavin Belson", "O-");
-
     function reloadCards() {
         let inputnome = document.querySelector("#inputName").value;
         let inputhemo = document.querySelector("#inputHemocentro").value;
         let predega = new Doador(inputnome, "A+");
         gavin.doar(predega, inputhemo);
-        loadCards(gavin.doacoesEuFiz, 'donations');
+        loadCards(gavin.doacoesEuFiz, 'donations', true);
+        page_load('doacoes');
     }
-
 
     loadCards(gavin.doacoesEuFiz, 'donations');
 </script>

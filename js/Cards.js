@@ -27,7 +27,7 @@ function cria_cards(name, description, tipo) {
     pessoas.appendChild(div);
 }
 
-function loadCards(pessoas, tipo) {
+function loadCards(pessoas, tipo, clean = false) {
     if (tipo == "pessoas")
         for (let i = 0; i < pessoas.length; i++) {
             let title = StringHelper.titlePessoas(pessoas[i]);
