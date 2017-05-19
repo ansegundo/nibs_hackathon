@@ -8,8 +8,8 @@ function cria_cards(name, description, tipo) {
 
     let template = `    
     <div class="col m6">
-        <div class="card hoverable ${color} waves-effect modal">
-            <div class="row valign-wrapper modal-content">
+        <div class="card hoverable ${color} waves-effect">
+            <div class="row valign-wrapper">
                 <div class="col s2">
                     <img src="res/logo.svg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                 </div>
