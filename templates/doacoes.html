@@ -13,4 +13,11 @@
     $(document).ready(function() {
         $('ul.tabs').tabs();
     });
+
+    let albedo = new Doador("Alberto", "O+");
+    let predega = new Doador("Pedrecal", "A+");
+
+    albedo.doar(predega, "Hemocentro Ilheus");
+
+    loadCards(albedo.doacoesEuFiz, 'donations');
 </script>
