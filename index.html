@@ -24,37 +24,28 @@
                 </div>
             </li>
             <li><a href="#!" onclick="page_load('feed')"><i class="material-icons">rss_feed</i>Feed</a></li>
-            <hr>
+            <li>
+                <div class="divider"></div>
+            </li>
             <li><a href="#!" onclick="page_load('map')"><i class="material-icons">map</i>Mapa</a></li>
-            <hr>
+            <li>
+                <div class="divider"></div>
+            </li>
             <li><a href="#!" onclick="page_load('cartilha')"><i class="material-icons">insert_drive_file</i>Cartilha</a></li>
-            <hr>
-            <li><a href="#!" onclick="page_load('doacoes')"> Minhas doações</a></li>
-            <hr>
-            <li><a href="#!" onclick="page_load('doacoes4me')">Doações para mim</a></li>
-            <hr>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a href="#!" onclick="page_load('doacoes')"><i class="material-icons">opacity</i>Minhas doações</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
             <li><a href="#!" onclick="page_load('settings')"><i class="material-icons">settings</i>Configurações</a></li>
         </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons icon-red"  style="font-size: 40px; color: #f44336 ;">menu</i></a>
     </header>
     <section id="page1" class="view content">
 
     </section>
-
-    <div class="fixed-action-btn">
-        <a class="btn-floating btn-large pink waves-effect waves-light">
-            <i class="large material-icons">add</i>
-        </a>
-    </div>
-
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
-        </div>
-    </div>
 
     </footer>
 
@@ -74,12 +65,6 @@
             edge: 'left', // Choose the horizontal origin
             closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
             draggable: true // Choose whether you can drag to open on touch screens
-        });
-    </script>
-    <script id="scriptmodal">
-        $(document).ready(function() {
-            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-            $('.modal').modal();
         });
     </script>
 </body>
