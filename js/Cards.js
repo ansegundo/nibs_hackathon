@@ -3,7 +3,7 @@ function cria_cards(name, description, tipo) {
     let div = document.createElement("div");
     div.classList.add("teste");
     let color = 'red';
-    if (tipo == "hemocentros")
+    if (tipo == "donations4me")
         color = 'green';
 
     let template = `
@@ -28,13 +28,18 @@ function cria_cards(name, description, tipo) {
 }
 
 function loadCards(pessoas, tipo) {
-    for (let i = 0; i < pessoas.length; i++) {
-        let name = pessoas[i].first_namew;
-        let lName = pessoas[i].last_name;
-        let description = `Endereço: ${pessoas[i].address}. Tipo Sanguineo: ${pessoas[i].blood_type}`
+    if (tipo == "pessoas")
+        for (let i = 0; i < pessoas.length; i++) {
+            let title = StringHelper.titlePessoas(pessoas[i]);
+            let description = StringHelper.descriptionPessoas(pessoas[i]);
 
-        let fullName = name + " " + lName;
+            cria_cards(title, description, tipo);
+        }
+    else if (tipo == "donations")
+        for (let i = 0; i < pessoas.length; i++) {
+            let title = StringHelper.titleDoacao(pessoas[i]);
+            let description = StringHelper.descriptionDoacao(pessoas[i]);
 
-        cria_cards(fullName, description, tipo);
-    }
+            cria_cards(title, description, tipo);
+        }
 }
